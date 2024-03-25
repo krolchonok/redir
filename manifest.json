@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Redirect TG",
+  "version": "1.0",
+  "description": "Redirects",
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Redirect TG"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://clicker.joincommunity.xyz/clicker*"],
+      "js": ["content.js"]
+    }
+  ]
+}
